@@ -16,7 +16,7 @@ menu = st.sidebar.selectbox("Selecciona una sección", [
     "Vista general", 
     "Ventas Totales en el Tiempo", 
     "Ingresos por Línea de Producto",
-    "Distribución de Rating",
+    "Distribución por Rating",
     "Gasto por Tipo de Cliente",
     "Costo vs. Ganancia Bruta",
     "Métodos de Pago",
@@ -64,7 +64,7 @@ def ingresos_por_producto():
 
 # Distribución del Rating
 def distribucion_rating():
-    st.header("Distribución de la Rating de Clientes")
+    st.header("Distribución del Rating de Clientes")
     fig = px.histogram(df, x="Rating", nbins=20, title="Distribución del Rating")
     st.plotly_chart(fig)
 
