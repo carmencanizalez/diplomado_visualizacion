@@ -7,7 +7,7 @@ import seaborn as sns
 st.set_page_config(page_title="Dashboard Grupo 57", layout="wide")
 
 # Título
-st.title("Dashboard Interactivo – Análisis de Ventas de una tienda Retail")
+st.title("Dashboard Estratégico: Visualización de Ventas para Tienda Retail")
 st.markdown("### Diplomado de Visualización de Datos – Grupo 57")
 
 # Cargar datos
@@ -69,12 +69,12 @@ elif menu == "Visualizaciones 2D":
 
     fig2, ax2 = plt.subplots()
     sns.scatterplot(x="Total", y="Quantity", hue="Rating", data=df, palette="viridis", ax=ax2)
-    ax2.set_title("Total vs Cantidad con Calificación")
+    ax2.set_title("Total vs Cantidad con Rating")
     st.pyplot(fig2)
 
     fig3, ax3 = plt.subplots()
     sns.histplot(df["Rating"], bins=10, kde=True, ax=ax3)
-    ax3.set_title("Distribución de Calificaciones")
+    ax3.set_title("Distribución de Rating")
     st.pyplot(fig3)
 
 # --- Sección: Visualización 3D
@@ -89,7 +89,7 @@ elif menu == "Visualización 3D":
     ax.set_xlabel("Total")
     ax.set_ylabel("Quantity")
     ax.set_zlabel("Rating")
-    ax.set_title("Relación 3D entre Total, Cantidad y Calificación")
+    ax.set_title("Relación 3D entre Total, Cantidad y Rating")
     fig.colorbar(scatter, ax=ax, label='Rating')
     st.pyplot(fig)
 
