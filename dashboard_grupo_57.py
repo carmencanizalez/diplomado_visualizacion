@@ -32,11 +32,24 @@ if menu == "Vista general":
     st.subheader("Vista previa de los datos")
     st.dataframe(df.head())
 
-    st.subheader("Resumen estadístico")
-    st.dataframe(df.describe())
+    st.markdown("## 2. Selección de variables clave")
+    st.markdown("""
+    A continuación, se identifican las variables más relevantes y su justificación:
 
-    st.subheader("Columnas disponibles")
-    st.write(df.columns.tolist())
+    | Variable               | Justificación                                                                 |
+    |------------------------|-------------------------------------------------------------------------------|
+    | `Date` y `Time`        | Permiten analizar tendencias por día, semana, fechas importantes y horas más recurrentes a visitas y compras |
+    | `City` y `Branch`      | Ayudan a comparar el rendimiento geográfico de las tiendas                   |
+    | `Customer type`        | Comparativa entre clientes afiliados y clientes regulares en el contexto de fidelización |
+    | `Gender`               | Permite explorar si hay diferencias de comportamiento por género             |
+    | `Product line`         | Clave para saber qué categorías venden más.                                  |
+    | `Unit price` y `Quantity` | Relacionadas directamente con el valor de cada compra                     |
+    | `Total` y `Tax 5%`     | Permiten evaluar el ingreso final y la carga impositiva                      |
+    | `Payment`              | Útil para conocer preferencias de método de pago                             |
+    | `Rating`               | Mide satisfacción del cliente: posible relación con otras variables          |
+
+    Estas variables serán la base para las visualizaciones que se presentarán en las siguientes secciones.
+    """)
 
 # --- Sección: Análisis descriptivo
 elif menu == "Análisis descriptivo":
