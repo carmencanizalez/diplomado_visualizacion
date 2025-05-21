@@ -9,7 +9,7 @@ df = pd.read_csv("data.csv")
 df["Date"] = pd.to_datetime(df["Date"])
 
 # Título principal del dashboard
-st.title("Dashboard Estratégico – Visualización y Análisis de Ventas en Supermercado")
+st.title("Dashboard Estratégico – Visualización y Análisis de Ventas en tienda")
 
 # Menú lateral
 menu = st.sidebar.selectbox("Selecciona una sección", [
